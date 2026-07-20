@@ -3,7 +3,6 @@
     --secondary-color: #0a9396;
     --accent1-color: #ee9b00;
     --accent2-color: #ffffff;
-
     --heading-font: Georgia, serif;
     --body-font: Arial, sans-serif;
 }
@@ -23,17 +22,14 @@ header, main, footer {
     width: 840px;
     margin: 0 auto;
 }
-
 h1, h2 {
     font-family: var(--heading-font);
     color: var(--primary-color);
 }
-
 nav, p, section, article {
     margin: 16px;
     padding: 8px;
 }
-
 header {
     display: flex;
     justify-content: space-between;
