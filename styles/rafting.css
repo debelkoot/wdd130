@@ -19,7 +19,7 @@
 /* Document Body Styling */
 body {
     font-family: var(--body-font);
-    color: var(--primary-color);
+    color: var(--accent1-color);
 }
 
 /* Center and Constrain Layout Width */
@@ -34,9 +34,10 @@ h1 {
     color: var(--primary-color);
 }
 
+/* 1. USED HERE: Sets section headings to secondary color */
 h2 {
     font-family: var(--heading-font);
-    color: var(--secondary-color); /* Uses --secondary-color here */
+    color: var(--secondary-color);
 }
 
 nav, p, section, article {
@@ -62,8 +63,9 @@ nav a {
     font-weight: bold;
 }
 
+/* 2. USED HERE: Changes nav link color on hover */
 nav a:hover {
-    color: var(--secondary-color); /* Uses --secondary-color here as well */
+    color: var(--secondary-color);
 }
 
 /* Hero Section Positioning */
