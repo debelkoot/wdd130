@@ -1,3 +1,4 @@
+/* Color Palette & Typography Variables */
 :root {
     --primary-color: #005f73;
     --secondary-color: #0a9396;
@@ -8,25 +9,34 @@
     --body-font: Arial, sans-serif;
 }
 
+/* Universal Box-Model Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Document Body Styling */
 body {
     font-family: var(--body-font);
     color: var(--primary-color);
 }
 
+/* Center and Constrain Layout Width */
 header, main, footer {
     width: 840px;
     margin: 0 auto;
 }
 
-h1, h2 {
+/* Typography Defaults */
+h1 {
     font-family: var(--heading-font);
     color: var(--primary-color);
+}
+
+h2 {
+    font-family: var(--heading-font);
+    color: var(--secondary-color); /* Uses --secondary-color here */
 }
 
 nav, p, section, article {
@@ -34,6 +44,7 @@ nav, p, section, article {
     padding: 8px;
 }
 
+/* Header & Navigation */
 header {
     display: flex;
     justify-content: space-between;
@@ -52,9 +63,10 @@ nav a {
 }
 
 nav a:hover {
-    color: var(--accent1-color);
+    color: var(--secondary-color); /* Uses --secondary-color here as well */
 }
 
+/* Hero Section Positioning */
 .hero {
     position: relative;
 }
@@ -65,6 +77,7 @@ nav a:hover {
     height: auto;
 }
 
+/* Hero Heading Overlay */
 .hero h1 {
     position: absolute;
     top: 20px;
@@ -76,21 +89,23 @@ nav a:hover {
     color: var(--accent2-color);
 }
 
+/* Hero Article Overlay */
 .hero article {
     position: absolute;
-    top: 55px;
-    left: 10px;
-    right: 10px;
+    top: 150px;
+    left: 40px;
+    right: 40px;
     background-color: rgba(255, 255, 255, 0.9);
-    padding: 10px;
+    padding: 16px;
 }
 
 .hero article img {
     float: right;
-    width: 85px;
-    margin-left: 10px;
+    width: 125px;
+    margin-left: 20px;
 }
 
+/* Footer & Social Media Navigation */
 footer {
     display: flex;
     justify-content: space-between;
@@ -102,5 +117,5 @@ footer {
 }
 
 .socialmedia img {
-    width:30px;
+    width: 40px;
 }
