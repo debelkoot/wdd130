@@ -27,6 +27,7 @@ header, main, footer {
 h1, h2 {
     font-family: var(--heading-font);
     color: var(--primary-color);
+    text-align: center;
 }
 
 /* Header Layout (CSS Grid) */
@@ -34,7 +35,7 @@ header {
     display: grid;
     grid-template-columns: 150px 1fr;
     align-items: center;
-    padding: 16px 0;
+    padding: 1rem 0;
 }
 
 header img {
@@ -42,144 +43,180 @@ header img {
     height: auto;
 }
 
-/* Navigation Layout (CSS Flex) */
-header nav {
+nav {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 16px;
+    justify-content: space-around;
 }
 
 nav a {
     text-decoration: none;
     color: var(--primary-color);
     font-weight: bold;
+    padding: 0.5rem 1rem;
 }
 
 nav a:hover {
     color: var(--accent1-color);
 }
 
-/* Hero Section */
-.hero {
-    position: relative;
-    margin-bottom: 20px;
+/* Contact Us Page Layout */
+.company-heading {
+    margin: 1.5rem 0 0.5rem;
 }
 
-.hero img {
-    display: block;
-    width: 100%;
-    height: auto;
+.company-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    align-items: start;
+    margin-bottom: 2rem;
 }
 
-.hero h1 {
-    position: absolute;
-    top: 20px;
-    width: 100%;
-    padding: 16px;
+.address-details {
+    grid-column: 1 / 3;
     text-align: center;
-    opacity: 0.8;
-    background-color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.address-details p {
+    margin-bottom: 0.25rem;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 350px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Contact Form Styling */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    background-color: #f9f9f9;
+    padding: 1.25rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-item label {
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #777;
+    border-radius: 3px;
+    font-family: var(--body-font);
+}
+
+/* Radio Group & Fieldset */
+.purpose-group {
+    border: none;
+    padding: 0;
+}
+
+.purpose-group legend {
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+}
+
+.purpose-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: normal;
+    margin-bottom: 0.25rem;
+    cursor: pointer;
+}
+
+.contact-form input[type="radio"],
+.contact-form input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.checkbox-item label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+/* Submit Button */
+.contact-form button[type="submit"] {
+    background-color: #e0e0e0;
+    color: #000;
+    border: 1px solid #888;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+    margin-top: 0.5rem;
+}
+
+.contact-form button[type="submit"]:hover {
+    background-color: var(--accent1-color);
     color: var(--accent2-color);
 }
 
-.hero article {
-    position: absolute;
-    top: 90px;
-    left: 20px;
-    right: 20px;
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 16px;
-    border-radius: 5px;
-}
-
-.hero article img {
-    float: right;
-    width: 120px;
-    margin-left: 15px;
-}
-
-/* History Section */
-.history {
-    margin: 40px 0;
-}
-
-.history h2 {
+/* Employee Profiles Section */
+.employees-section {
+    margin-top: 2rem;
     text-align: center;
-    margin-bottom: 16px;
-    border-bottom: 2px solid var(--secondary-color);
-    padding-bottom: 5px;
 }
 
-.history-content {
+.employees-section h2 {
+    margin-bottom: 1rem;
+}
+
+.employee-profiles {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
-    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
 }
 
-.history-content img {
+.employee-profiles figure {
+    background-color: #f0f0f0;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.employee-profiles img {
     width: 100%;
     height: auto;
+    max-height: 150px;
     object-fit: cover;
-    border-radius: 4px;
+    margin-bottom: 0.5rem;
 }
 
-/* Adventures Gallery Section */
-.adventures {
-    margin: 40px 0;
-}
-
-.adventures h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.adventures-gallery {
-    display: flex;
-    justify-content: space-between;
-    gap: 12px;
-}
-
-.adventures-gallery figure {
-    flex: 1;
-    text-align: center;
-}
-
-.adventures-gallery img {
-    width: 100%;
-    height: 110px;
-    object-fit: cover;
-    border-radius: 4px;
-}
-
-.adventures-gallery figcaption {
-    font-size: 0.85rem;
-    margin-top: 8px;
-    font-weight: bold;
-    color: var(--primary-color);
-}
-
-/* Footer Section */
+/* Footer Layout */
 footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 0;
-    margin-top: 30px;
-    border-top: 2px solid var(--primary-color);
-}
-
-.socialmedia {
-    display: flex;
-    gap: 12px;
-}
-
-.socialmedia a {
-    text-decoration: none;
+    padding: 1rem 0;
+    border-top: 1px solid var(--primary-color);
 }
 
 .socialmedia img {
     width: 30px;
     height: 30px;
+    margin-left: 0.5rem;
 }
